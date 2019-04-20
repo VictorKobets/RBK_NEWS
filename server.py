@@ -44,7 +44,7 @@ def donwload_news():
         mimetype="text/txt",
         headers={
             "Content-disposition":
-            f"attachment; filename=RBK_news{datetime.datetime.now()}.txt"
+            f"attachment; filename='RBK_news{datetime.datetime.now()}.txt'"
             }
         )
 
@@ -56,7 +56,7 @@ def donwload_articles():
         mimetype="text/txt",
         headers={
             "Content-disposition":
-            f"attachment; filename=RBK_articles{datetime.datetime.now()}.txt"
+            f"attachment; filename='RBK_articles{datetime.datetime.now()}.txt'"
         }
     )
 
