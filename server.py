@@ -12,6 +12,7 @@ data = Scrapy()
 def window():
     '''View the main window.
     '''
+    data.current_content = None
     return render_template('window.html')
 
 
