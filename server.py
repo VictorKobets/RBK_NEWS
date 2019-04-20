@@ -39,24 +39,28 @@ def ret():
 
 @app.route('/donwload_news', methods=['POST'])
 def donwload_news():
+    date = datetime.datetime.now()
+    date = date.replace(" ", "_")
     return Response(
         data.save_to_file(save_type='news'),
         mimetype="text/plain",
         headers={
             "Content-disposition":
-            f"attachment; filename=RBK_news.txt"
+            f"attachment; filename=RBK_news_{date}.txt"
             }
         )
 
 
 @app.route('/donwload_articles', methods=['POST'])
 def donwload_articles():
+    date = datetime.datetime.now()
+    date = date.replace(" ", "_")
     return Response(
         data.save_to_file(save_type='articles'),
         mimetype="text/plain",
         headers={
             "Content-disposition":
-            f"attachment; filename=RBK_articles.txt"
+            f"attachment; filename=RBK_articles_{date}.txt"
         }
     )
 
