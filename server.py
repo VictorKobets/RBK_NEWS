@@ -41,10 +41,10 @@ def ret():
 def donwload_news():
     return Response(
         data.save_to_file(save_type='news'),
-        mimetype="text/txt",
+        mimetype="text/plain",
         headers={
             "Content-disposition":
-            f"attachment; filename='RBK_news{datetime.datetime.now()}.txt'"
+            f"attachment; filename=RBK_news.txt"
             }
         )
 
@@ -53,10 +53,10 @@ def donwload_news():
 def donwload_articles():
     return Response(
         data.save_to_file(save_type='articles'),
-        mimetype="text/txt",
+        mimetype="text/plain",
         headers={
             "Content-disposition":
-            f"attachment; filename='RBK_articles{datetime.datetime.now()}.txt'"
+            f"attachment; filename=RBK_articles.txt"
         }
     )
 
