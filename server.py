@@ -39,7 +39,7 @@ def ret():
 
 @app.route('/donwload_news', methods=['POST'])
 def donwload_news():
-    date = datetime.datetime.now()
+    date = str(datetime.datetime.now())
     date = date.replace(" ", "_")
     return Response(
         data.save_to_file(save_type='news'),
@@ -53,7 +53,7 @@ def donwload_news():
 
 @app.route('/donwload_articles', methods=['POST'])
 def donwload_articles():
-    date = datetime.datetime.now()
+    date = str(datetime.datetime.now())
     date = date.replace(" ", "_")
     return Response(
         data.save_to_file(save_type='articles'),
