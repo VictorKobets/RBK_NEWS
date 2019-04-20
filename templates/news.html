@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scrapy</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <form action="/ret" method="POST">
+                    <input type="submit" value="Назад">
+                </form>
+            </td>
+            <td>
+                <form action="/donwload_news" method="POST">
+                    <input type="submit" value="Скчать .txt">
+                </form>
+            </td>
+        </tr>
+    </table>
+    <table>
+        {% for content in data %}
+        <tr>
+            <td>
+                <p>{{ content.title }}</p>
+                <a href="{{ content.link }}">{{ content.link }}</a>
+                <p>{{ content.date }}</p>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
